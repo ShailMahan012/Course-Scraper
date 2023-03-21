@@ -1,30 +1,39 @@
 from bs4 import BeautifulSoup as bs 
-import requests 
-URL = "https://cpdonline.co.uk/login/" 
- 
-payload = { 
-	"username-18894": "uceeifeanacho@gmail.com", 
-	"user_password-18894": "ChildofGod2022",
-    "form_id": "18894"
-}
+import requests
+import pickle
 
-payload = {'username-18894': 'uceeifeanacho@gmail.com',
-	'user_password-18894': 'ChildofGod2022',
-	'form_id': '18894',
-	'um_request': '',
-	'redirect_to': 'https://cpdonline.co.uk/my-account/',
-	'_wpnonce': '356822a138',
-	'_wp_http_referer': '/login/'
-}
+pickle_in = open("session.pickle","rb")
+session = pickle.load(pickle_in)
+pickle_in.close()
 
-s = requests.session() 
-response = s.post(URL, data=payload) 
-print(response.status_code) # If the request went Ok we usually get a 200 status. 
+def get_soup(url):
+    resp = session.get(url)
+    soup = bs(resp.content, "html.parser")
+    return soup
 
-req = s.get("https://cpdonline.co.uk/lms/care-certificate/unit/care-certificate-standard-1-understanding-your-role/").content
-open("test.html", "wb").write(req)
+links = open("unit_links.txt", "r").read().split("\n")
 
-# soup = bs(response.content, "html.parser")
+ic = 0
+for i in links:
+    print(i)
+    ic += 1
+    index = open(f"units/unit_{ic}/index.html", "w")
+    index.write("{% extends 'care_certificate/course_layout.html' %}\n")
+    index.write("{% block wpb_wrapper %}\n")
+    
+    soup = get_soup(i)
+    wpb_wrapper = str(soup.find_all("div", {"class": "wpb_wrapper"})[0])
 
-# protected_content = soup.find(attrs={"id": "pageName"}).text
-# print(protected_content)
+    course_content = str(soup.find_all("div", {"id": "learndash_lesson_topics_list"})[0])
+    course_quiz = str(soup.find_all("div", {"id": "learndash_quizzes"})[0])
+    bottom_links = str(soup.find_all("p", {"id": "learndash_next_prev_link"})[0])
+
+    index.write(wpb_wrapper)
+    index.write("\n{% endblock %}\n\n{% block content %}\n")
+    index.write(course_content)
+    index.write(course_quiz)
+    index.write(bottom_links)
+    index.write("\n{% endblock %}")
+    print(f"DONE -- {ic}")
+    
+    
