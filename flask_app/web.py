@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-from flask import Flask, redirect, render_template
+from flask import Flask, redirect, render_template, request
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
@@ -50,6 +50,14 @@ class Unit_Sections(db.Model):
     unit_id = db.Column(db.Integer)
     title = db.Column(db.Text)
     template = db.Column(db.Text)
+
+@app.route('/login', methods=["POST", "GET"])
+def login():
+    if request.method == "POST":
+        print(dict(request.form))
+        input()
+    return render_template("login.html")
+    
 
 
 @app.route('/')
