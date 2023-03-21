@@ -2,6 +2,8 @@ from bs4 import BeautifulSoup as bs
 import requests
 import pickle
 
+# read session file create by create_session.py script in which login session is stored
+# no need to login to website again and again
 pickle_in = open("session.pickle","rb")
 session = pickle.load(pickle_in)
 pickle_in.close()
@@ -11,7 +13,8 @@ def get_soup(url):
     soup = bs(resp.content, "html.parser")
     return soup
 
-links = open("unit_links.txt", "r").read().split("\n")
+# read unit links from file and split it using new line
+links = open("units/unit_links.txt", "r").read().split("\n")
 
 ic = 0
 for i in links:
