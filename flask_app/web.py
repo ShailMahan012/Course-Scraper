@@ -77,7 +77,7 @@ def unit(unit_id):
 
 @app.route("/lms/care-certificate/unit/<int:unit_id>/topic/<int:topic_id>")
 def topic(unit_id, topic_id):
-    return render_template("care_certificate/topic/1.html")
+    return render_template("care_certificate/topic/6.html")
 
 
 if __name__ == "__main__":
