@@ -74,6 +74,12 @@ def care_certificate():
 def unit(unit_id):
     return render_template("care_certificate/index.html")
 
+
+@app.route("/lms/care-certificate/unit/<int:unit_id>/topic/<int:topic_id>")
+def topic(unit_id, topic_id):
+    return render_template("care_certificate/topic/1.html")
+
+
 if __name__ == "__main__":
     app.run(port=8081, debug=True)
 
