@@ -72,12 +72,14 @@ def care_certificate():
 
 @app.route("/lms/care-certificate/unit/<int:unit_id>")
 def unit(unit_id):
-    return render_template("care_certificate/index.html")
+    unit_dir = f"care_certificate/units/unit_{unit_id}"
+    return render_template(f"{unit_dir}/index.html")
 
 
 @app.route("/lms/care-certificate/unit/<int:unit_id>/topic/<int:topic_id>")
 def topic(unit_id, topic_id):
-    return render_template("care_certificate/topic/1.html")
+    unit_dir = f"care_certificate/units/unit_{unit_id}"
+    return render_template(f"{unit_dir}/{topic_id}.html")
 
 
 if __name__ == "__main__":
