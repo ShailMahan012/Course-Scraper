@@ -81,6 +81,9 @@ def get_vc_custom_CSS(soup, RESP_content):
     RESP_content = RESP_content.decode()
 
     image_div = soup.find("div", {"class": "wpb_column vc_column_container vc_col-sm-6 vc_hidden-xs vc_col-has-fill"})
+    if not image_div:
+        return ""
+
     image_div = image_div.find("div")
     image_div_class = image_div["class"][1]
     # print(image_div_class)
@@ -107,14 +110,20 @@ for unit_no in range(1, 16):
     
     for ic, link in enumerate(topic_links[:]):
         topic_no = ic+1
-        soup, RESP_content = get_soup(link)
+        # soup, RESP_content = get_soup(link)
+        soup, RESP_content = get_soup(topic_links[5])
 
         # Back to Lesson link
         back_div = soup.find("div", {"id": "learndash_back_to_lesson"}) # this
         back_div.find("a")["href"] = f"/lms/care-certificate/unit/{unit_no}"
         
         # Top title
-        title_div = soup.find_all("div", {"class": "wpb_wrapper"})[1]
+        wpb_wrapper = soup.find_all("div", {"class": "wpb_wrapper"})
+        if wpb_wrapper[1].find("h1"):
+            title_div = wpb_wrapper[0]
+        elif wpb_wrapper[0].find("h1"):
+            title_div = wpb_wrapper[0]
+
         title = title_div.find("h1").text # this
 
         # Content of course
@@ -148,7 +157,7 @@ for unit_no in range(1, 16):
         write_HTML(unit_no, topic_no, HTML)
         print(f"# DONE topic --{topic_no}--")
         write_status(unit_no, topic_no)
-
+        exit()
         # break
 
     print(f"#################### DONE UNIT --{unit_no}--")
