@@ -25,19 +25,11 @@ layout = """{{% extends 'care_certificate/topic_layout.html' %}}
 {}
 {{% endblock %}}
 
-{{% block top_title %}}
-{}
-{{% endblock %}}
-
 {{% block vs_custom %}}
 {}
 {{% endblock %}}
 
 {{% block content %}}
-{}
-{{% endblock %}}
-
-{{% block audio %}}
 {}
 {{% endblock %}}
 
@@ -108,32 +100,20 @@ for unit_no in range(1, 16):
     
     print(f"UNIT: {unit_no}, TOTAL TOPICS: {len(topic_links)}")
     
-    for ic, link in enumerate(topic_links[:]):
+    for ic, link in enumerate(topic_links):
         topic_no = ic+1
-        # soup, RESP_content = get_soup(link)
-        soup, RESP_content = get_soup(topic_links[5])
+        soup, RESP_content = get_soup(link)
 
         # Back to Lesson link
         back_div = soup.find("div", {"id": "learndash_back_to_lesson"}) # this
         back_div.find("a")["href"] = f"/lms/care-certificate/unit/{unit_no}"
-        
-        # Top title
-        wpb_wrapper = soup.find_all("div", {"class": "wpb_wrapper"})
-        if wpb_wrapper[1].find("h1"):
-            title_div = wpb_wrapper[0]
-        elif wpb_wrapper[0].find("h1"):
-            title_div = wpb_wrapper[0]
 
-        title = title_div.find("h1").text # this
 
         # Content of course
-        content = soup.find("div", {"class": "vc_row wpb_row vc_inner vc_row-fluid vc_row-o-equal-height vc_row-flex"}) # this
+        content = soup.find("div", {"class": "learndash_content"}) # this
 
         # Content Image URL
         vc_custom = get_vc_custom_CSS(soup, RESP_content) # this
-
-        # Audio
-        audio = soup.find("audio") # this
 
         # Previous link
         prev_link = soup.find("a", {"class": "prev-link"})
@@ -152,12 +132,13 @@ for unit_no in range(1, 16):
         if next_link:
             links += str(next_link) + "\n"
 
-        HTML = layout.format(back_div, title, vc_custom, content, audio, links)
+        HTML = layout.format(back_div, vc_custom, content, links)
 
         write_HTML(unit_no, topic_no, HTML)
         print(f"# DONE topic --{topic_no}--")
         write_status(unit_no, topic_no)
-        exit()
+
+        # exit()
         # break
 
     print(f"#################### DONE UNIT --{unit_no}--")
