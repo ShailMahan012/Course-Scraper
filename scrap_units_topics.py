@@ -16,7 +16,7 @@ def get_soup(url):
     resp = session.get(url)
     soup = bs(resp.content, "html.parser")
     # open("test.html", "wb").write(resp.content)
-    return soup, re
+    return soup, resp.content
 
 
 layout = """{{% extends 'care_certificate/topic_layout.html' %}}
@@ -149,7 +149,6 @@ for unit_no in range(1, 16):
         print(f"# DONE topic --{topic_no}--")
         write_status(unit_no, topic_no)
 
-        exit()
         # break
 
     print(f"#################### DONE UNIT --{unit_no}--")
