@@ -972,7 +972,28 @@ margin: 0 auto !important;
 		<div class="wpb_wrapper">
 			    <div class="skin_default" id="skin_default">
         <div class="h5ap_quick_player" data-options="{&quot;controls&quot;:[&quot;play&quot;,&quot;progress&quot;,&quot;duration&quot;,&quot;mute&quot;,&quot;volume&quot;],&quot;seekTime&quot;:0}" style="width:px">
-            <div tabindex="0" class="plyr plyr--full-ui plyr--audio plyr--html5 plyr--paused"><div class="plyr__controls"><button class="plyr__controls__item plyr__control" type="button" data-plyr="play" aria-label="play"><svg class="icon--pressed" aria-hidden="true" focusable="false"><use href="#plyr-pause"></use></svg><svg class="icon--not-pressed" aria-hidden="true" focusable="false"><use href="#plyr-play"></use></svg><span class="label--pressed plyr__sr-only">Pause</span><span class="label--not-pressed plyr__sr-only">play</span></button><div class="plyr__controls__item plyr__progress__container"><div class="plyr__progress"><input data-plyr="seek" type="range" min="0" max="100" step="0.01" value="0" autocomplete="off" role="slider" aria-label="Seek" aria-valuemin="0" aria-valuemax="77.348571" aria-valuenow="3.157991" id="plyr-seek-8256" aria-valuetext="00:03 of 01:17" style="--value:4.08%;" seek-value="-0.41162188670750727"><progress class="plyr__progress__buffer" min="0" max="100" value="100" role="progressbar" aria-hidden="true">% buffered</progress><span class="plyr__tooltip" style="left: 0%;">00:00</span></div></div><div class="plyr__controls__item plyr__time--duration plyr__time" aria-label="Duration">01:17</div><div class="plyr__controls__item plyr__volume"><button type="button" class="plyr__control" data-plyr="mute"><svg class="icon--pressed" aria-hidden="true" focusable="false"><use href="#plyr-muted"></use></svg><svg class="icon--not-pressed" aria-hidden="true" focusable="false"><use href="#plyr-volume"></use></svg><span class="label--pressed plyr__sr-only">Unmute</span><span class="label--not-pressed plyr__sr-only">Mute</span></button><input data-plyr="volume" type="range" min="0" max="1" step="0.05" value="1" autocomplete="off" role="slider" aria-label="Volume" aria-valuemin="0" aria-valuemax="100" aria-valuenow="30" id="plyr-volume-8256" aria-valuetext="30.0%" style="--value:30%;"></div></div>
+            <div tabindex="0" class="plyr plyr--full-ui plyr--audio plyr--html5 plyr--paused">
+				<div class="plyr__controls" style="display: none;">
+					<button class="plyr__controls__item plyr__control" type="button" data-plyr="play" aria-label="play">
+						<svg class="icon--pressed" aria-hidden="true" focusable="false">
+							<use href="#plyr-pause"></use>
+						</svg>
+						<svg class="icon--not-pressed" aria-hidden="true" focusable="false">
+							<use href="#plyr-play"></use>
+						</svg>
+						<span class="label--pressed plyr__sr-only">Pause</span>
+						<span class="label--not-pressed plyr__sr-only">play</span>
+					</button>
+
+					<div class="plyr__controls__item plyr__progress__container">
+						<div class="plyr__progress">
+							<input data-plyr="seek" type="range" min="0" max="100" step="0.01" value="0" autocomplete="off" role="slider" aria-label="Seek" aria-valuemin="0" aria-valuemax="77.348571" aria-valuenow="3.157991" id="plyr-seek-8256" aria-valuetext="00:03 of 01:17" style="--value:4.08%;" seek-value="-0.41162188670750727">
+							<progress class="plyr__progress__buffer" min="0" max="100" value="100" role="progressbar" aria-hidden="true">% buffered</progress>
+							<span class="plyr__tooltip" style="left: 0%;">00:00</span>
+						</div>
+					</div>
+
+					<div class="plyr__controls__item plyr__time--duration plyr__time" aria-label="Duration">01:17</div><div class="plyr__controls__item plyr__volume"><button type="button" class="plyr__control" data-plyr="mute"><svg class="icon--pressed" aria-hidden="true" focusable="false"><use href="#plyr-muted"></use></svg><svg class="icon--not-pressed" aria-hidden="true" focusable="false"><use href="#plyr-volume"></use></svg><span class="label--pressed plyr__sr-only">Unmute</span><span class="label--not-pressed plyr__sr-only">Mute</span></button><input data-plyr="volume" type="range" min="0" max="1" step="0.05" value="1" autocomplete="off" role="slider" aria-label="Volume" aria-valuemin="0" aria-valuemax="100" aria-valuenow="30" id="plyr-volume-8256" aria-valuetext="30.0%" style="--value:30%;"></div></div>
 			{% block audio%}
 			{% endblock %}
 		</div>
