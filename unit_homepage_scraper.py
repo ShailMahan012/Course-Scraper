@@ -16,7 +16,7 @@ def get_soup(url):
     return soup
 
 # read unit links from file and split it using new line
-links = open("units/unit_links.txt", "r").read().split("\n")
+links = open("units/unit_links.txt", "r").read().split("\n")[:-1]
 
 ic = 0
 for i in links:
