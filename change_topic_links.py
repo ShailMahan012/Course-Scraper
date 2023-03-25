@@ -1,3 +1,4 @@
+# STATUS: DONE
 from bs4 import BeautifulSoup as bs 
 
 def get_soup(html):
