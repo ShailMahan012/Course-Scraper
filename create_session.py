@@ -26,7 +26,7 @@ def login(URL, wpnonce):
     session = requests.session()
     # send post request
     response = session.post(URL, data=payload)
-    open("login_account.html", "wb").write(response.content)
+    # open("login_account.html", "wb").write(response.content)
     print(response.status_code)
     return session
 
