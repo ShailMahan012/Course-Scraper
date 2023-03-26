@@ -1,4 +1,4 @@
-# STATUS: incomplete
+# STATUS: DONE
 # scrap every single section of every single unit
 from bs4 import BeautifulSoup as bs
 import os
