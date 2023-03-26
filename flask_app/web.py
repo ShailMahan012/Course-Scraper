@@ -93,6 +93,11 @@ def quiz(unit_id):
     # return render_template(f"{unit_dir}/quiz.html")
     return render_template("care_certificate/quiz_example.html")
 
+@app.route("/test", methods=["POST"])
+def test():
+    print(request.form)
+    return "{a: 1, b: 2, c: {asdf:123, zxcv: 098}}"
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8081, debug=True)
