@@ -31,8 +31,6 @@ function check_quiz() {
         });
 
         resp_div = quiz_li.getElementsByClassName("wpProQuiz_response")[0]
-        // console.log(quiz_li)
-        // return 0
 
         resp_div.style.display = "block"
         correct_div = resp_div.children[0]
@@ -52,7 +50,30 @@ function check_quiz() {
     return correct_answers
 }
 
+function result(correct_answers) {
+    var result_div = document.getElementById("result_div")
+    var correct_answers_div = document.getElementById("correct_answers")
+    var restart_quiz = document.getElementById("restart_quiz")
+    var msg_passed = document.getElementById("msg_passed")
+    var msg_failed = document.getElementById("msg_failed")
+
+    result_div.style.display = "block"
+    correct_answers_div.innerText = correct_answers
+
+    if (correct_answers >= 12) {
+        msg_passed.style.display = "block"
+    }
+    else
+        msg_failed.style.display = "block"
+
+    restart_quiz.onclick = ()=> {
+        location.href = location.href
+    }
+}
+
+
+
 btn_check.onclick = ()=> {
     var correct_answers = check_quiz()
-    console.log(correct_answers)
+    result(correct_answers)
 }
