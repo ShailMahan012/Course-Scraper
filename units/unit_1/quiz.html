@@ -1,747 +1,1292 @@
+
+<link rel="stylesheet" href="/static/quiz.css">
 {% extends 'care_certificate/quiz_layout.html' %}
 
 {% block top_box %}
 <div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><h1 class="vc_custom_heading" style="color: #ffffff;text-align: center">Care Certificate Standard 1 – Understanding Your Role Quiz</h1>
 <div class="wpb_text_column wpb_content_element">
 <div class="wpb_wrapper">
-<p style="text-align: center;"><span style="color: #ffffff; font-size: 20px;">Now you can attempt the quiz for this course. You must achieve at least 12 out of the 15 questions to pass but you can attempt the quiz as many times as you like. So if you don’t pass first time – don’t worry. You can go back to the lessons and reattempt the quiz again as many times as you need to pass.</span></p>
+<p style="text-align: center;"><span style="color: #ffffff; font-size: 20px;">Now
+ you can attempt the quiz for this course. You must achieve at least 12 
+out of the 15 questions to pass but you can attempt the quiz as many 
+times as you like. So if you don’t pass first time – don’t worry. You 
+can go back to the lessons and reattempt the quiz again as many times as
+ you need to pass.</span></p>
 </div>
 </div>
 </div></div></div>
-{% end block %}
+{% endblock %}
 
 {% block audio %}
 <div class="skin_default" id="skin_default">
 <div class="h5ap_quick_player" data-options='{"controls":["play","progress","duration","mute","volume"],"seekTime":0}' style="width:px">
-<audio autoplay="" class="player641ffc51b76d2" controls="" muted="" playsinline="" preload="auto">
-<source src="https://cdn.cpdonline.co.uk/wp-content/uploads/2022/02/28110120/43-mini-quiz.2_1.mp3" type="audio/mp3"/>
+<audio autoplay="autoplay" class="player642038f54e1f7" controls="controls" muted="muted" playsinline="" preload="auto">
+<source src="/static/quiz_audio/43-mini-quiz.2_1.mp3" type="audio/mp3"/>
             Your browser does not support the audio element.
             </audio>
 </div>
 </div>
-{% end block %}
+{% endblock %}
+
+{% block result %}
+<div class="wpProQuiz_results" id="result_div" style="display: none;">
+ <h4 class="wpProQuiz_header">
+  Results
+ </h4>
+ <p>
+  <span class="wpProQuiz_correct_answer" id="correct_answers">
+   5
+  </span>
+  of
+  <span>
+   15
+  </span>
+  Questions answered correctly
+ </p>
+ <div>
+  <ul class="wpProQuiz_resultsList">
+   <li id="msg_failed" style="display: none;">
+    <div>
+     <p>
+      You have failed the quiz. But don’t worry – you can go back to 
+the lessons and then tackle this quiz again as many times as you need to
+ pass.
+     </p>
+    </div>
+   </li>
+   <li id="msg_passed" style="display: none;">
+    <div>
+     <p>
+      Well done on passing the quiz!
+     </p>
+     <p>
+      You have now completed the Care Certificate 1 quiz! You can now move onto the next section.
+     </p>
+    </div>
+   </li>
+  </ul>
+ </div>
+ <div class="ld-quiz-actions" style="margin: 10px 0px;">
+  <input class="wpProQuiz_button wpProQuiz_button_restartQuiz" id="restart_quiz" name="restartQuiz" type="button" value="Restart Quiz"/>
+ </div>
+</div>
+
+{% endblock %}
 
 {% block quiz %}
 <ol class="wpProQuiz_list">
-<li class="wpProQuiz_listItem" data-question-meta='{"type":"single","question_pro_id":12827,"question_post_id":0}' data-type="single" style="display: none;">
-<div class="wpProQuiz_question_page">
-				Question <span>1</span> of <span>15</span> </div>
-<h5 class="wpProQuiz_header" style="display: none;">
-<span>1</span>. Question
-				</h5>
-<div class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;">
-<div class="wpProQuiz_question_text">
-<p>Not discussing or disclosing anyone’s personal information relates to which of the following:</p>
-</div>
-<p class="wpProQuiz_clear" style="clear:both;"></p>
-<ul class="wpProQuiz_questionList" data-question_id="12827" data-type="single">
-<li class="wpProQuiz_questionListItem" data-pos="0">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_12827" type="radio" value="1"/> Providing care and support										</label>
-</li>
-<li class="wpProQuiz_questionListItem" data-pos="1">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_12827" type="radio" value="2"/> Working as part of a team										</label>
-</li>
-<li class="wpProQuiz_questionListItem" data-pos="2">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_12827" type="radio" value="3"/> Contributing to activities										</label>
-</li>
-<li class="wpProQuiz_questionListItem" data-pos="3">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_12827" type="radio" value="4"/> Respecting confidentiality										</label>
-</li>
-</ul>
-</div>
-<div class="wpProQuiz_response" style="display: none;">
-<div class="wpProQuiz_correct" style="display: none;">
-<span>
-								Correct								</span>
-<div class="wpProQuiz_AnswerMessage"></div>
-</div>
-<div class="wpProQuiz_incorrect" style="display: none;">
-<span>
-								Incorrect							</span>
-<div class="wpProQuiz_AnswerMessage"></div>
-</div>
-</div>
-<input class="wpProQuiz_button wpProQuiz_QuestionButton" name="back" style="float: left ; margin-right: 10px ; display: none;" type="button" value="Back"/> <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="check" style="float: right ; margin-right: 10px ; display: none;" type="button" value="Check"/> <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="next" style="float: right; display: none;" type="button" value="Next"/> <div style="clear: both;"></div>
-</li>
-<li class="wpProQuiz_listItem" data-question-meta='{"type":"single","question_pro_id":11253,"question_post_id":0}' data-type="single" style="display: none;">
-<div class="wpProQuiz_question_page">
-				Question <span>2</span> of <span>15</span> </div>
-<h5 class="wpProQuiz_header" style="display: none;">
-<span>2</span>. Question
-				</h5>
-<div class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;">
-<div class="wpProQuiz_question_text">
-<p>If you have any health and safety concerns, you must do what?</p>
-</div>
-<p class="wpProQuiz_clear" style="clear:both;"></p>
-<ul class="wpProQuiz_questionList" data-question_id="11253" data-type="single">
-<li class="wpProQuiz_questionListItem" data-pos="0">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11253" type="radio" value="1"/> Inform the Health and Safety Executive										</label>
-</li>
-<li class="wpProQuiz_questionListItem" data-pos="1">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11253" type="radio" value="2"/> Ask a family member about what you should do										</label>
-</li>
-<li class="wpProQuiz_questionListItem" data-pos="2">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11253" type="radio" value="3"/> Ignore it, as you don't want to get into trouble										</label>
-</li>
-<li class="wpProQuiz_questionListItem" data-pos="3">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11253" type="radio" value="4"/> Report it to your employer, manager, supervisor or health and safety representative										</label>
-</li>
-</ul>
-</div>
-<div class="wpProQuiz_response" style="display: none;">
-<div class="wpProQuiz_correct" style="display: none;">
-<span>
-								Correct								</span>
-<div class="wpProQuiz_AnswerMessage"></div>
-</div>
-<div class="wpProQuiz_incorrect" style="display: none;">
-<span>
-								Incorrect							</span>
-<div class="wpProQuiz_AnswerMessage"></div>
-</div>
-</div>
-<input class="wpProQuiz_button wpProQuiz_QuestionButton" name="back" style="float: left ; margin-right: 10px ; display: none;" type="button" value="Back"/> <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="check" style="float: right ; margin-right: 10px ; display: none;" type="button" value="Check"/> <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="next" style="float: right; display: none;" type="button" value="Next"/> <div style="clear: both;"></div>
-</li>
-<li class="wpProQuiz_listItem" data-question-meta='{"type":"single","question_pro_id":11254,"question_post_id":0}' data-type="single" style="display: none;">
-<div class="wpProQuiz_question_page">
-				Question <span>3</span> of <span>15</span> </div>
-<h5 class="wpProQuiz_header" style="display: none;">
-<span>3</span>. Question
-				</h5>
-<div class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;">
-<div class="wpProQuiz_question_text">
-<p>Reporting things that you feel are not right, illegal or unsafe is known as?</p>
-</div>
-<p class="wpProQuiz_clear" style="clear:both;"></p>
-<ul class="wpProQuiz_questionList" data-question_id="11254" data-type="single">
-<li class="wpProQuiz_questionListItem" data-pos="0">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11254" type="radio" value="1"/> Misconduct										</label>
-</li>
-<li class="wpProQuiz_questionListItem" data-pos="1">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11254" type="radio" value="2"/> Agreed ways of working										</label>
-</li>
-<li class="wpProQuiz_questionListItem" data-pos="2">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11254" type="radio" value="3"/> Whistleblowing										</label>
-</li>
-<li class="wpProQuiz_questionListItem" data-pos="3">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11254" type="radio" value="4"/> Reporting										</label>
-</li>
-</ul>
-</div>
-<div class="wpProQuiz_response" style="display: none;">
-<div class="wpProQuiz_correct" style="display: none;">
-<span>
-								Correct								</span>
-<div class="wpProQuiz_AnswerMessage"></div>
-</div>
-<div class="wpProQuiz_incorrect" style="display: none;">
-<span>
-								Incorrect							</span>
-<div class="wpProQuiz_AnswerMessage"></div>
-</div>
-</div>
-<input class="wpProQuiz_button wpProQuiz_QuestionButton" name="back" style="float: left ; margin-right: 10px ; display: none;" type="button" value="Back"/> <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="check" style="float: right ; margin-right: 10px ; display: none;" type="button" value="Check"/> <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="next" style="float: right; display: none;" type="button" value="Next"/> <div style="clear: both;"></div>
-</li>
-<li class="wpProQuiz_listItem" data-question-meta='{"type":"single","question_pro_id":11255,"question_post_id":0}' data-type="single" style="display: none;">
-<div class="wpProQuiz_question_page">
-				Question <span>4</span> of <span>15</span> </div>
-<h5 class="wpProQuiz_header" style="display: none;">
-<span>4</span>. Question
-				</h5>
-<div class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;">
-<div class="wpProQuiz_question_text">
-<p>All records must be?</p>
-</div>
-<p class="wpProQuiz_clear" style="clear:both;"></p>
-<ul class="wpProQuiz_questionList" data-question_id="11255" data-type="single">
-<li class="wpProQuiz_questionListItem" data-pos="0">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11255" type="radio" value="1"/> Up to date										</label>
-</li>
-<li class="wpProQuiz_questionListItem" data-pos="1">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11255" type="radio" value="2"/> Understandable and legible										</label>
-</li>
-<li class="wpProQuiz_questionListItem" data-pos="2">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11255" type="radio" value="3"/> Securely stored										</label>
-</li>
-<li class="wpProQuiz_questionListItem" data-pos="3">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11255" type="radio" value="4"/> All of these answers										</label>
-</li>
-</ul>
-</div>
-<div class="wpProQuiz_response" style="display: none;">
-<div class="wpProQuiz_correct" style="display: none;">
-<span>
-								Correct								</span>
-<div class="wpProQuiz_AnswerMessage"></div>
-</div>
-<div class="wpProQuiz_incorrect" style="display: none;">
-<span>
-								Incorrect							</span>
-<div class="wpProQuiz_AnswerMessage"></div>
-</div>
-</div>
-<input class="wpProQuiz_button wpProQuiz_QuestionButton" name="back" style="float: left ; margin-right: 10px ; display: none;" type="button" value="Back"/> <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="check" style="float: right ; margin-right: 10px ; display: none;" type="button" value="Check"/> <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="next" style="float: right; display: none;" type="button" value="Next"/> <div style="clear: both;"></div>
-</li>
-<li class="wpProQuiz_listItem" data-question-meta='{"type":"single","question_pro_id":11256,"question_post_id":0}' data-type="single" style="display: none;">
-<div class="wpProQuiz_question_page">
-				Question <span>5</span> of <span>15</span> </div>
-<h5 class="wpProQuiz_header" style="display: none;">
-<span>5</span>. Question
-				</h5>
-<div class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;">
-<div class="wpProQuiz_question_text">
-<p>A trusted, independent person who provides support such as speaking and acting on behalf of the individual is known as an?</p>
-</div>
-<p class="wpProQuiz_clear" style="clear:both;"></p>
-<ul class="wpProQuiz_questionList" data-question_id="11256" data-type="single">
-<li class="wpProQuiz_questionListItem" data-pos="0">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11256" type="radio" value="1"/> Actuary										</label>
-</li>
-<li class="wpProQuiz_questionListItem" data-pos="1">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11256" type="radio" value="2"/> Artist										</label>
-</li>
-<li class="wpProQuiz_questionListItem" data-pos="2">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11256" type="radio" value="3"/> Advocate										</label>
-</li>
-<li class="wpProQuiz_questionListItem" data-pos="3">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11256" type="radio" value="4"/> Attorney										</label>
-</li>
-</ul>
-</div>
-<div class="wpProQuiz_response" style="display: none;">
-<div class="wpProQuiz_correct" style="display: none;">
-<span>
-								Correct								</span>
-<div class="wpProQuiz_AnswerMessage"></div>
-</div>
-<div class="wpProQuiz_incorrect" style="display: none;">
-<span>
-								Incorrect							</span>
-<div class="wpProQuiz_AnswerMessage"></div>
-</div>
-</div>
-<input class="wpProQuiz_button wpProQuiz_QuestionButton" name="back" style="float: left ; margin-right: 10px ; display: none;" type="button" value="Back"/> <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="check" style="float: right ; margin-right: 10px ; display: none;" type="button" value="Check"/> <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="next" style="float: right; display: none;" type="button" value="Next"/> <div style="clear: both;"></div>
-</li>
-<li class="wpProQuiz_listItem" data-question-meta='{"type":"single","question_pro_id":11257,"question_post_id":0}' data-type="single" style="display: none;">
-<div class="wpProQuiz_question_page">
-				Question <span>6</span> of <span>15</span> </div>
-<h5 class="wpProQuiz_header" style="display: none;">
-<span>6</span>. Question
-				</h5>
-<div class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;">
-<div class="wpProQuiz_question_text">
-<p>Having the ability and expertise to understand an individual’s health and social needs so that you are capable of delivering effective care is known as?</p>
-</div>
-<p class="wpProQuiz_clear" style="clear:both;"></p>
-<ul class="wpProQuiz_questionList" data-question_id="11257" data-type="single">
-<li class="wpProQuiz_questionListItem" data-pos="0">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11257" type="radio" value="1"/> Trained										</label>
-</li>
-<li class="wpProQuiz_questionListItem" data-pos="1">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11257" type="radio" value="2"/> Awareness										</label>
-</li>
-<li class="wpProQuiz_questionListItem" data-pos="2">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11257" type="radio" value="3"/> Communication										</label>
-</li>
-<li class="wpProQuiz_questionListItem" data-pos="3">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11257" type="radio" value="4"/> Competence										</label>
-</li>
-</ul>
-</div>
-<div class="wpProQuiz_response" style="display: none;">
-<div class="wpProQuiz_correct" style="display: none;">
-<span>
-								Correct								</span>
-<div class="wpProQuiz_AnswerMessage"></div>
-</div>
-<div class="wpProQuiz_incorrect" style="display: none;">
-<span>
-								Incorrect							</span>
-<div class="wpProQuiz_AnswerMessage"></div>
-</div>
-</div>
-<input class="wpProQuiz_button wpProQuiz_QuestionButton" name="back" style="float: left ; margin-right: 10px ; display: none;" type="button" value="Back"/> <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="check" style="float: right ; margin-right: 10px ; display: none;" type="button" value="Check"/> <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="next" style="float: right; display: none;" type="button" value="Next"/> <div style="clear: both;"></div>
-</li>
-<li class="wpProQuiz_listItem" data-question-meta='{"type":"single","question_pro_id":11258,"question_post_id":0}' data-type="single" style="display: none;">
-<div class="wpProQuiz_question_page">
-				Question <span>7</span> of <span>15</span> </div>
-<h5 class="wpProQuiz_header" style="display: none;">
-<span>7</span>. Question
-				</h5>
-<div class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;">
-<div class="wpProQuiz_question_text">
-<p>How many protected characteristics are there under the Equality Act 2010?</p>
-</div>
-<p class="wpProQuiz_clear" style="clear:both;"></p>
-<ul class="wpProQuiz_questionList" data-question_id="11258" data-type="single">
-<li class="wpProQuiz_questionListItem" data-pos="0">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11258" type="radio" value="1"/> 6										</label>
-</li>
-<li class="wpProQuiz_questionListItem" data-pos="1">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11258" type="radio" value="2"/> 7										</label>
-</li>
-<li class="wpProQuiz_questionListItem" data-pos="2">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11258" type="radio" value="3"/> 8										</label>
-</li>
-<li class="wpProQuiz_questionListItem" data-pos="3">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11258" type="radio" value="4"/> 9										</label>
-</li>
-</ul>
-</div>
-<div class="wpProQuiz_response" style="display: none;">
-<div class="wpProQuiz_correct" style="display: none;">
-<span>
-								Correct								</span>
-<div class="wpProQuiz_AnswerMessage"></div>
-</div>
-<div class="wpProQuiz_incorrect" style="display: none;">
-<span>
-								Incorrect							</span>
-<div class="wpProQuiz_AnswerMessage"></div>
-</div>
-</div>
-<input class="wpProQuiz_button wpProQuiz_QuestionButton" name="back" style="float: left ; margin-right: 10px ; display: none;" type="button" value="Back"/> <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="check" style="float: right ; margin-right: 10px ; display: none;" type="button" value="Check"/> <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="next" style="float: right; display: none;" type="button" value="Next"/> <div style="clear: both;"></div>
-</li>
-<li class="wpProQuiz_listItem" data-question-meta='{"type":"single","question_pro_id":11259,"question_post_id":0}' data-type="single" style="display: none;">
-<div class="wpProQuiz_question_page">
-				Question <span>8</span> of <span>15</span> </div>
-<h5 class="wpProQuiz_header" style="display: none;">
-<span>8</span>. Question
-				</h5>
-<div class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;">
-<div class="wpProQuiz_question_text">
-<p>What should you be mindful of using when communicating with individuals, their family and friends?</p>
-</div>
-<p class="wpProQuiz_clear" style="clear:both;"></p>
-<ul class="wpProQuiz_questionList" data-question_id="11259" data-type="single">
-<li class="wpProQuiz_questionListItem" data-pos="0">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11259" type="radio" value="1"/> Pictures										</label>
-</li>
-<li class="wpProQuiz_questionListItem" data-pos="1">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11259" type="radio" value="2"/> Jargon										</label>
-</li>
-<li class="wpProQuiz_questionListItem" data-pos="2">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11259" type="radio" value="3"/> Talking too much										</label>
-</li>
-<li class="wpProQuiz_questionListItem" data-pos="3">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11259" type="radio" value="4"/> Policies										</label>
-</li>
-</ul>
-</div>
-<div class="wpProQuiz_response" style="display: none;">
-<div class="wpProQuiz_correct" style="display: none;">
-<span>
-								Correct								</span>
-<div class="wpProQuiz_AnswerMessage"></div>
-</div>
-<div class="wpProQuiz_incorrect" style="display: none;">
-<span>
-								Incorrect							</span>
-<div class="wpProQuiz_AnswerMessage"></div>
-</div>
-</div>
-<input class="wpProQuiz_button wpProQuiz_QuestionButton" name="back" style="float: left ; margin-right: 10px ; display: none;" type="button" value="Back"/> <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="check" style="float: right ; margin-right: 10px ; display: none;" type="button" value="Check"/> <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="next" style="float: right; display: none;" type="button" value="Next"/> <div style="clear: both;"></div>
-</li>
-<li class="wpProQuiz_listItem" data-question-meta='{"type":"single","question_pro_id":11260,"question_post_id":0}' data-type="single" style="display: none;">
-<div class="wpProQuiz_question_page">
-				Question <span>9</span> of <span>15</span> </div>
-<h5 class="wpProQuiz_header" style="display: none;">
-<span>9</span>. Question
-				</h5>
-<div class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;">
-<div class="wpProQuiz_question_text">
-<p>Which of the following could lead to you making assumptions and judgements about people and situations, which may not be correct?</p>
-</div>
-<p class="wpProQuiz_clear" style="clear:both;"></p>
-<ul class="wpProQuiz_questionList" data-question_id="11260" data-type="single">
-<li class="wpProQuiz_questionListItem" data-pos="0">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11260" type="radio" value="1"/> Your beliefs and goals										</label>
-</li>
-<li class="wpProQuiz_questionListItem" data-pos="1">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11260" type="radio" value="2"/> Your attitudes and values										</label>
-</li>
-<li class="wpProQuiz_questionListItem" data-pos="2">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11260" type="radio" value="3"/> Your values and beliefs										</label>
-</li>
-<li class="wpProQuiz_questionListItem" data-pos="3">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11260" type="radio" value="4"/> Your attitudes and beliefs										</label>
-</li>
-</ul>
-</div>
-<div class="wpProQuiz_response" style="display: none;">
-<div class="wpProQuiz_correct" style="display: none;">
-<span>
-								Correct								</span>
-<div class="wpProQuiz_AnswerMessage"></div>
-</div>
-<div class="wpProQuiz_incorrect" style="display: none;">
-<span>
-								Incorrect							</span>
-<div class="wpProQuiz_AnswerMessage"></div>
-</div>
-</div>
-<input class="wpProQuiz_button wpProQuiz_QuestionButton" name="back" style="float: left ; margin-right: 10px ; display: none;" type="button" value="Back"/> <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="check" style="float: right ; margin-right: 10px ; display: none;" type="button" value="Check"/> <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="next" style="float: right; display: none;" type="button" value="Next"/> <div style="clear: both;"></div>
-</li>
-<li class="wpProQuiz_listItem" data-question-meta='{"type":"single","question_pro_id":11261,"question_post_id":0}' data-type="single" style="display: none;">
-<div class="wpProQuiz_question_page">
-				Question <span>10</span> of <span>15</span> </div>
-<h5 class="wpProQuiz_header" style="display: none;">
-<span>10</span>. Question
-				</h5>
-<div class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;">
-<div class="wpProQuiz_question_text">
-<p>What should you do if you do not have a copy of your job description?</p>
-</div>
-<p class="wpProQuiz_clear" style="clear:both;"></p>
-<ul class="wpProQuiz_questionList" data-question_id="11261" data-type="single">
-<li class="wpProQuiz_questionListItem" data-pos="0">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11261" type="radio" value="1"/> Nothing, you don't need a copy										</label>
-</li>
-<li class="wpProQuiz_questionListItem" data-pos="1">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11261" type="radio" value="2"/> Ask your employer to provide a copy										</label>
-</li>
-<li class="wpProQuiz_questionListItem" data-pos="2">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11261" type="radio" value="3"/> Ask a colleague for a copy of their job description										</label>
-</li>
-<li class="wpProQuiz_questionListItem" data-pos="3">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11261" type="radio" value="4"/> Use your job description from a previous workplace										</label>
-</li>
-</ul>
-</div>
-<div class="wpProQuiz_response" style="display: none;">
-<div class="wpProQuiz_correct" style="display: none;">
-<span>
-								Correct								</span>
-<div class="wpProQuiz_AnswerMessage"></div>
-</div>
-<div class="wpProQuiz_incorrect" style="display: none;">
-<span>
-								Incorrect							</span>
-<div class="wpProQuiz_AnswerMessage"></div>
-</div>
-</div>
-<input class="wpProQuiz_button wpProQuiz_QuestionButton" name="back" style="float: left ; margin-right: 10px ; display: none;" type="button" value="Back"/> <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="check" style="float: right ; margin-right: 10px ; display: none;" type="button" value="Check"/> <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="next" style="float: right; display: none;" type="button" value="Next"/> <div style="clear: both;"></div>
-</li>
-<li class="wpProQuiz_listItem" data-question-meta='{"type":"single","question_pro_id":12826,"question_post_id":0}' data-type="single" style="display: none;">
-<div class="wpProQuiz_question_page">
-				Question <span>11</span> of <span>15</span> </div>
-<h5 class="wpProQuiz_header" style="display: none;">
-<span>11</span>. Question
-				</h5>
-<div class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;">
-<div class="wpProQuiz_question_text">
-<p>These are closely connected to your morals and values. They are aspects of your life that you feel strongly about, which provide daily guidance. This is the definition of which of the following?</p>
-</div>
-<p class="wpProQuiz_clear" style="clear:both;"></p>
-<ul class="wpProQuiz_questionList" data-question_id="12826" data-type="single">
-<li class="wpProQuiz_questionListItem" data-pos="0">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_12826" type="radio" value="1"/> Background										</label>
-</li>
-<li class="wpProQuiz_questionListItem" data-pos="1">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_12826" type="radio" value="2"/> Experiences										</label>
-</li>
-<li class="wpProQuiz_questionListItem" data-pos="2">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_12826" type="radio" value="3"/> Attitudes										</label>
-</li>
-<li class="wpProQuiz_questionListItem" data-pos="3">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_12826" type="radio" value="4"/> Beliefs										</label>
-</li>
-</ul>
-</div>
-<div class="wpProQuiz_response" style="display: none;">
-<div class="wpProQuiz_correct" style="display: none;">
-<span>
-								Correct								</span>
-<div class="wpProQuiz_AnswerMessage"></div>
-</div>
-<div class="wpProQuiz_incorrect" style="display: none;">
-<span>
-								Incorrect							</span>
-<div class="wpProQuiz_AnswerMessage"></div>
-</div>
-</div>
-<input class="wpProQuiz_button wpProQuiz_QuestionButton" name="back" style="float: left ; margin-right: 10px ; display: none;" type="button" value="Back"/> <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="check" style="float: right ; margin-right: 10px ; display: none;" type="button" value="Check"/> <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="next" style="float: right; display: none;" type="button" value="Next"/> <div style="clear: both;"></div>
-</li>
-<li class="wpProQuiz_listItem" data-question-meta='{"type":"single","question_pro_id":72724,"question_post_id":0}' data-type="single" style="display: none;">
-<div class="wpProQuiz_question_page">
-				Question <span>12</span> of <span>15</span> </div>
-<h5 class="wpProQuiz_header" style="display: none;">
-<span>12</span>. Question
-				</h5>
-<div class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;">
-<div class="wpProQuiz_question_text">
-<p>Effective communication should be?</p>
-</div>
-<p class="wpProQuiz_clear" style="clear:both;"></p>
-<ul class="wpProQuiz_questionList" data-question_id="72724" data-type="single">
-<li class="wpProQuiz_questionListItem" data-pos="0">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_72724" type="radio" value="1"/> All of these answers										</label>
-</li>
-<li class="wpProQuiz_questionListItem" data-pos="1">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_72724" type="radio" value="2"/> Two-way										</label>
-</li>
-<li class="wpProQuiz_questionListItem" data-pos="2">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_72724" type="radio" value="3"/> Understandable										</label>
-</li>
-<li class="wpProQuiz_questionListItem" data-pos="3">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_72724" type="radio" value="4"/> Free of jargon										</label>
-</li>
-</ul>
-</div>
-<div class="wpProQuiz_response" style="display: none;">
-<div class="wpProQuiz_correct" style="display: none;">
-<span>
-								Correct								</span>
-<div class="wpProQuiz_AnswerMessage"></div>
-</div>
-<div class="wpProQuiz_incorrect" style="display: none;">
-<span>
-								Incorrect							</span>
-<div class="wpProQuiz_AnswerMessage"></div>
-</div>
-</div>
-<input class="wpProQuiz_button wpProQuiz_QuestionButton" name="back" style="float: left ; margin-right: 10px ; display: none;" type="button" value="Back"/> <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="check" style="float: right ; margin-right: 10px ; display: none;" type="button" value="Check"/> <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="next" style="float: right; display: none;" type="button" value="Next"/> <div style="clear: both;"></div>
-</li>
-<li class="wpProQuiz_listItem" data-question-meta='{"type":"single","question_pro_id":11264,"question_post_id":0}' data-type="single" style="display: none;">
-<div class="wpProQuiz_question_page">
-				Question <span>13</span> of <span>15</span> </div>
-<h5 class="wpProQuiz_header" style="display: none;">
-<span>13</span>. Question
-				</h5>
-<div class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;">
-<div class="wpProQuiz_question_text">
-<p>Your role will require you to work with many different people who have a variety of roles. What is this known as?</p>
-</div>
-<p class="wpProQuiz_clear" style="clear:both;"></p>
-<ul class="wpProQuiz_questionList" data-question_id="11264" data-type="single">
-<li class="wpProQuiz_questionListItem" data-pos="0">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11264" type="radio" value="1"/> Pretend working										</label>
-</li>
-<li class="wpProQuiz_questionListItem" data-pos="1">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11264" type="radio" value="2"/> Partnership working										</label>
-</li>
-<li class="wpProQuiz_questionListItem" data-pos="2">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11264" type="radio" value="3"/> People working										</label>
-</li>
-<li class="wpProQuiz_questionListItem" data-pos="3">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11264" type="radio" value="4"/> Peaceful working										</label>
-</li>
-</ul>
-</div>
-<div class="wpProQuiz_response" style="display: none;">
-<div class="wpProQuiz_correct" style="display: none;">
-<span>
-								Correct								</span>
-<div class="wpProQuiz_AnswerMessage"></div>
-</div>
-<div class="wpProQuiz_incorrect" style="display: none;">
-<span>
-								Incorrect							</span>
-<div class="wpProQuiz_AnswerMessage"></div>
-</div>
-</div>
-<input class="wpProQuiz_button wpProQuiz_QuestionButton" name="back" style="float: left ; margin-right: 10px ; display: none;" type="button" value="Back"/> <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="check" style="float: right ; margin-right: 10px ; display: none;" type="button" value="Check"/> <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="next" style="float: right; display: none;" type="button" value="Next"/> <div style="clear: both;"></div>
-</li>
-<li class="wpProQuiz_listItem" data-question-meta='{"type":"single","question_pro_id":11265,"question_post_id":0}' data-type="single" style="display: none;">
-<div class="wpProQuiz_question_page">
-				Question <span>14</span> of <span>15</span> </div>
-<h5 class="wpProQuiz_header" style="display: none;">
-<span>14</span>. Question
-				</h5>
-<div class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;">
-<div class="wpProQuiz_question_text">
-<p>Complex terminology, which is often used by professionals is also known as which of the following?</p>
-</div>
-<p class="wpProQuiz_clear" style="clear:both;"></p>
-<ul class="wpProQuiz_questionList" data-question_id="11265" data-type="single">
-<li class="wpProQuiz_questionListItem" data-pos="0">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11265" type="radio" value="1"/> Jargon										</label>
-</li>
-<li class="wpProQuiz_questionListItem" data-pos="1">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11265" type="radio" value="2"/> Communication										</label>
-</li>
-<li class="wpProQuiz_questionListItem" data-pos="2">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11265" type="radio" value="3"/> Advice										</label>
-</li>
-<li class="wpProQuiz_questionListItem" data-pos="3">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11265" type="radio" value="4"/> Advocacy										</label>
-</li>
-</ul>
-</div>
-<div class="wpProQuiz_response" style="display: none;">
-<div class="wpProQuiz_correct" style="display: none;">
-<span>
-								Correct								</span>
-<div class="wpProQuiz_AnswerMessage"></div>
-</div>
-<div class="wpProQuiz_incorrect" style="display: none;">
-<span>
-								Incorrect							</span>
-<div class="wpProQuiz_AnswerMessage"></div>
-</div>
-</div>
-<input class="wpProQuiz_button wpProQuiz_QuestionButton" name="back" style="float: left ; margin-right: 10px ; display: none;" type="button" value="Back"/> <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="check" style="float: right ; margin-right: 10px ; display: none;" type="button" value="Check"/> <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="next" style="float: right; display: none;" type="button" value="Next"/> <div style="clear: both;"></div>
-</li>
-<li class="wpProQuiz_listItem" data-question-meta='{"type":"single","question_pro_id":11266,"question_post_id":0}' data-type="single" style="display: none;">
-<div class="wpProQuiz_question_page">
-				Question <span>15</span> of <span>15</span> </div>
-<h5 class="wpProQuiz_header" style="display: none;">
-<span>15</span>. Question
-				</h5>
-<div class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;">
-<div class="wpProQuiz_question_text">
-<p>Your organisation will have aims, which means?</p>
-</div>
-<p class="wpProQuiz_clear" style="clear:both;"></p>
-<ul class="wpProQuiz_questionList" data-question_id="11266" data-type="single">
-<li class="wpProQuiz_questionListItem" data-pos="0">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11266" type="radio" value="1"/> The overall general goals of the organisation										</label>
-</li>
-<li class="wpProQuiz_questionListItem" data-pos="1">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11266" type="radio" value="2"/> The beliefs or ideals of the organisation, which should be evident in all aspects of care that you provide										</label>
-</li>
-<li class="wpProQuiz_questionListItem" data-pos="2">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11266" type="radio" value="3"/> The specific things that must be in place in order to achieve the aims										</label>
-</li>
-<li class="wpProQuiz_questionListItem" data-pos="3">
-<span style="display:none;"></span>
-<label>
-<input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11266" type="radio" value="4"/> These are closely connected to your morals and values. They are aspects of your life that you feel strongly about, which provide daily guidance										</label>
-</li>
-</ul>
-</div>
-<div class="wpProQuiz_response" style="display: none;">
-<div class="wpProQuiz_correct" style="display: none;">
-<span>
-								Correct								</span>
-<div class="wpProQuiz_AnswerMessage"></div>
-</div>
-<div class="wpProQuiz_incorrect" style="display: none;">
-<span>
-								Incorrect							</span>
-<div class="wpProQuiz_AnswerMessage"></div>
-</div>
-</div>
-<input class="wpProQuiz_button wpProQuiz_QuestionButton" name="back" style="float: left ; margin-right: 10px ; display: none;" type="button" value="Back"/> <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="check" style="float: right ; margin-right: 10px ; display: none;" type="button" value="Check"/> <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="next" style="float: right; display: none;" type="button" value="Next"/> <div style="clear: both;"></div>
-</li>
+ <li class="wpProQuiz_listItem">
+  <div class="wpProQuiz_question_page">
+   Question
+   <span>
+    1
+   </span>
+   of
+   <span>
+    15
+   </span>
+  </div>
+  <div class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;">
+   <div class="wpProQuiz_question_text">
+    <p>
+     Not discussing or disclosing anyone’s personal information relates to which of the following:
+    </p>
+   </div>
+   <p class="wpProQuiz_clear" style="clear:both;">
+   </p>
+   <ul class="wpProQuiz_questionList" data-question_id="12827" data-type="single">
+    <li class="wpProQuiz_questionListItem" data-pos="1">
+     <span style="display:none;">
+      1.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_12827" type="radio" value="0"/>
+      Working as part of a team
+     </label>
+    </li>
+    <li class="wpProQuiz_questionListItem" data-pos="3">
+     <span style="display:none;">
+      2.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_12827" type="radio" value="1"/>
+      Respecting confidentiality
+     </label>
+    </li>
+    <li class="wpProQuiz_questionListItem" data-pos="0">
+     <span style="display:none;">
+      3.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_12827" type="radio" value="0"/>
+      Providing care and support
+     </label>
+    </li>
+    <li class="wpProQuiz_questionListItem" data-pos="2">
+     <span style="display:none;">
+      4.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_12827" type="radio" value="0"/>
+      Contributing to activities
+     </label>
+    </li>
+   </ul>
+  </div>
+  <div class="wpProQuiz_response" style="display: none;">
+   <div class="wpProQuiz_correct" style="display: none;">
+    <span>
+     Correct
+    </span>
+    <div class="wpProQuiz_AnswerMessage">
+    </div>
+   </div>
+   <div class="wpProQuiz_incorrect" style="display: none;">
+    <span>
+     Incorrect
+    </span>
+    <div class="wpProQuiz_AnswerMessage">
+    </div>
+   </div>
+  </div>
+  <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="back" style="float: left ; margin-right: 10px ; display: none;" type="button" value="Back"/>
+  <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="check" style="float: right; margin-right: 10px; display: none;" type="button" value="Check"/>
+  <input class="wpProQuiz_button wpProQuiz_QuestionButton" data-question-lock="true" name="next" style="float: right; display: none;" type="button" value="Next"/>
+  <div style="clear: both;">
+  </div>
+ </li>
+ <li class="wpProQuiz_listItem">
+  <div class="wpProQuiz_question_page">
+   Question
+   <span>
+    2
+   </span>
+   of
+   <span>
+    15
+   </span>
+  </div>
+  <div class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;">
+   <div class="wpProQuiz_question_text">
+    <p>
+     If you have any health and safety concerns, you must do what?
+    </p>
+   </div>
+   <p class="wpProQuiz_clear" style="clear:both;">
+   </p>
+   <ul class="wpProQuiz_questionList" data-question_id="11253" data-type="single">
+    <li class="wpProQuiz_questionListItem" data-pos="1">
+     <span style="display:none;">
+      1.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11253" type="radio" value="0"/>
+      Ask a family member about what you should do
+     </label>
+    </li>
+    <li class="wpProQuiz_questionListItem" data-pos="2">
+     <span style="display:none;">
+      2.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11253" type="radio" value="0"/>
+      Ignore it, as you don't want to get into trouble
+     </label>
+    </li>
+    <li class="wpProQuiz_questionListItem" data-pos="3">
+     <span style="display:none;">
+      3.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11253" type="radio" value="1"/>
+      Report it to your employer, manager, supervisor or health and safety representative
+     </label>
+    </li>
+    <li class="wpProQuiz_questionListItem" data-pos="0">
+     <span style="display:none;">
+      4.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11253" type="radio" value="0"/>
+      Inform the Health and Safety Executive
+     </label>
+    </li>
+   </ul>
+  </div>
+  <div class="wpProQuiz_response" style="display: none;">
+   <div class="wpProQuiz_correct" style="display: none;">
+    <span>
+     Correct
+    </span>
+    <div class="wpProQuiz_AnswerMessage">
+    </div>
+   </div>
+   <div class="wpProQuiz_incorrect" style="display: none;">
+    <span>
+     Incorrect
+    </span>
+    <div class="wpProQuiz_AnswerMessage">
+    </div>
+   </div>
+  </div>
+  <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="back" style="float: left ; margin-right: 10px ; display: none;" type="button" value="Back"/>
+  <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="check" style="float: right; margin-right: 10px; display: none;" type="button" value="Check"/>
+  <input class="wpProQuiz_button wpProQuiz_QuestionButton" data-question-lock="true" name="next" style="float: right; display: none;" type="button" value="Next"/>
+  <div style="clear: both;">
+  </div>
+ </li>
+ <li class="wpProQuiz_listItem">
+  <div class="wpProQuiz_question_page">
+   Question
+   <span>
+    3
+   </span>
+   of
+   <span>
+    15
+   </span>
+  </div>
+  <div class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;">
+   <div class="wpProQuiz_question_text">
+    <p>
+     Reporting things that you feel are not right, illegal or unsafe is known as?
+    </p>
+   </div>
+   <p class="wpProQuiz_clear" style="clear:both;">
+   </p>
+   <ul class="wpProQuiz_questionList" data-question_id="11254" data-type="single">
+    <li class="wpProQuiz_questionListItem" data-pos="1">
+     <span style="display:none;">
+      1.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11254" type="radio" value="0"/>
+      Agreed ways of working
+     </label>
+    </li>
+    <li class="wpProQuiz_questionListItem" data-pos="0">
+     <span style="display:none;">
+      2.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11254" type="radio" value="0"/>
+      Misconduct
+     </label>
+    </li>
+    <li class="wpProQuiz_questionListItem" data-pos="2">
+     <span style="display:none;">
+      3.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11254" type="radio" value="1"/>
+      Whistleblowing
+     </label>
+    </li>
+    <li class="wpProQuiz_questionListItem" data-pos="3">
+     <span style="display:none;">
+      4.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11254" type="radio" value="0"/>
+      Reporting
+     </label>
+    </li>
+   </ul>
+  </div>
+  <div class="wpProQuiz_response" style="display: none;">
+   <div class="wpProQuiz_correct" style="display: none;">
+    <span>
+     Correct
+    </span>
+    <div class="wpProQuiz_AnswerMessage">
+    </div>
+   </div>
+   <div class="wpProQuiz_incorrect" style="display: none;">
+    <span>
+     Incorrect
+    </span>
+    <div class="wpProQuiz_AnswerMessage">
+    </div>
+   </div>
+  </div>
+  <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="back" style="float: left ; margin-right: 10px ; display: none;" type="button" value="Back"/>
+  <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="check" style="float: right; margin-right: 10px; display: none;" type="button" value="Check"/>
+  <input class="wpProQuiz_button wpProQuiz_QuestionButton" data-question-lock="true" name="next" style="float: right; display: none;" type="button" value="Next"/>
+  <div style="clear: both;">
+  </div>
+ </li>
+ <li class="wpProQuiz_listItem">
+  <div class="wpProQuiz_question_page">
+   Question
+   <span>
+    4
+   </span>
+   of
+   <span>
+    15
+   </span>
+  </div>
+  <div class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;">
+   <div class="wpProQuiz_question_text">
+    <p>
+     All records must be?
+    </p>
+   </div>
+   <p class="wpProQuiz_clear" style="clear:both;">
+   </p>
+   <ul class="wpProQuiz_questionList" data-question_id="11255" data-type="single">
+    <li class="wpProQuiz_questionListItem" data-pos="1">
+     <span style="display:none;">
+      1.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11255" type="radio" value="0"/>
+      Understandable and legible
+     </label>
+    </li>
+    <li class="wpProQuiz_questionListItem" data-pos="0">
+     <span style="display:none;">
+      2.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11255" type="radio" value="0"/>
+      Up to date
+     </label>
+    </li>
+    <li class="wpProQuiz_questionListItem" data-pos="3">
+     <span style="display:none;">
+      3.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11255" type="radio" value="1"/>
+      All of these answers
+     </label>
+    </li>
+    <li class="wpProQuiz_questionListItem" data-pos="2">
+     <span style="display:none;">
+      4.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11255" type="radio" value="0"/>
+      Securely stored
+     </label>
+    </li>
+   </ul>
+  </div>
+  <div class="wpProQuiz_response" style="display: none;">
+   <div class="wpProQuiz_correct" style="display: none;">
+    <span>
+     Correct
+    </span>
+    <div class="wpProQuiz_AnswerMessage">
+    </div>
+   </div>
+   <div class="wpProQuiz_incorrect" style="display: none;">
+    <span>
+     Incorrect
+    </span>
+    <div class="wpProQuiz_AnswerMessage">
+    </div>
+   </div>
+  </div>
+  <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="back" style="float: left ; margin-right: 10px ; display: none;" type="button" value="Back"/>
+  <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="check" style="float: right; margin-right: 10px; display: none;" type="button" value="Check"/>
+  <input class="wpProQuiz_button wpProQuiz_QuestionButton" data-question-lock="true" name="next" style="float: right; display: none;" type="button" value="Next"/>
+  <div style="clear: both;">
+  </div>
+ </li>
+ <li class="wpProQuiz_listItem">
+  <div class="wpProQuiz_question_page">
+   Question
+   <span>
+    5
+   </span>
+   of
+   <span>
+    15
+   </span>
+  </div>
+  <div class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;">
+   <div class="wpProQuiz_question_text">
+    <p>
+     Having the ability and expertise to understand an individual’s 
+health and social needs so that you are capable of delivering effective 
+care is known as?
+    </p>
+   </div>
+   <p class="wpProQuiz_clear" style="clear:both;">
+   </p>
+   <ul class="wpProQuiz_questionList" data-question_id="11257" data-type="single">
+    <li class="wpProQuiz_questionListItem" data-pos="2">
+     <span style="display:none;">
+      1.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11257" type="radio" value="0"/>
+      Communication
+     </label>
+    </li>
+    <li class="wpProQuiz_questionListItem" data-pos="1">
+     <span style="display:none;">
+      2.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11257" type="radio" value="0"/>
+      Awareness
+     </label>
+    </li>
+    <li class="wpProQuiz_questionListItem" data-pos="0">
+     <span style="display:none;">
+      3.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11257" type="radio" value="0"/>
+      Trained
+     </label>
+    </li>
+    <li class="wpProQuiz_questionListItem" data-pos="3">
+     <span style="display:none;">
+      4.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11257" type="radio" value="1"/>
+      Competence
+     </label>
+    </li>
+   </ul>
+  </div>
+  <div class="wpProQuiz_response" style="display: none;">
+   <div class="wpProQuiz_correct" style="display: none;">
+    <span>
+     Correct
+    </span>
+    <div class="wpProQuiz_AnswerMessage">
+    </div>
+   </div>
+   <div class="wpProQuiz_incorrect" style="display: none;">
+    <span>
+     Incorrect
+    </span>
+    <div class="wpProQuiz_AnswerMessage">
+    </div>
+   </div>
+  </div>
+  <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="back" style="float: left ; margin-right: 10px ; display: none;" type="button" value="Back"/>
+  <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="check" style="float: right; margin-right: 10px; display: none;" type="button" value="Check"/>
+  <input class="wpProQuiz_button wpProQuiz_QuestionButton" data-question-lock="true" name="next" style="float: right; display: none;" type="button" value="Next"/>
+  <div style="clear: both;">
+  </div>
+ </li>
+ <li class="wpProQuiz_listItem">
+  <div class="wpProQuiz_question_page">
+   Question
+   <span>
+    6
+   </span>
+   of
+   <span>
+    15
+   </span>
+  </div>
+  <div class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;">
+   <div class="wpProQuiz_question_text">
+    <p>
+     How many protected characteristics are there under the Equality Act 2010?
+    </p>
+   </div>
+   <p class="wpProQuiz_clear" style="clear:both;">
+   </p>
+   <ul class="wpProQuiz_questionList" data-question_id="11258" data-type="single">
+    <li class="wpProQuiz_questionListItem" data-pos="1">
+     <span style="display:none;">
+      1.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11258" type="radio" value="0"/>
+      7
+     </label>
+    </li>
+    <li class="wpProQuiz_questionListItem" data-pos="0">
+     <span style="display:none;">
+      2.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11258" type="radio" value="0"/>
+      6
+     </label>
+    </li>
+    <li class="wpProQuiz_questionListItem" data-pos="2">
+     <span style="display:none;">
+      3.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11258" type="radio" value="0"/>
+      8
+     </label>
+    </li>
+    <li class="wpProQuiz_questionListItem" data-pos="3">
+     <span style="display:none;">
+      4.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11258" type="radio" value="1"/>
+      9
+     </label>
+    </li>
+   </ul>
+  </div>
+  <div class="wpProQuiz_response" style="display: none;">
+   <div class="wpProQuiz_correct" style="display: none;">
+    <span>
+     Correct
+    </span>
+    <div class="wpProQuiz_AnswerMessage">
+    </div>
+   </div>
+   <div class="wpProQuiz_incorrect" style="display: none;">
+    <span>
+     Incorrect
+    </span>
+    <div class="wpProQuiz_AnswerMessage">
+    </div>
+   </div>
+  </div>
+  <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="back" style="float: left ; margin-right: 10px ; display: none;" type="button" value="Back"/>
+  <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="check" style="float: right; margin-right: 10px; display: none;" type="button" value="Check"/>
+  <input class="wpProQuiz_button wpProQuiz_QuestionButton" data-question-lock="true" name="next" style="float: right; display: none;" type="button" value="Next"/>
+  <div style="clear: both;">
+  </div>
+ </li>
+ <li class="wpProQuiz_listItem">
+  <div class="wpProQuiz_question_page">
+   Question
+   <span>
+    7
+   </span>
+   of
+   <span>
+    15
+   </span>
+  </div>
+  <div class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;">
+   <div class="wpProQuiz_question_text">
+    <p>
+     Which of the following could lead to you making assumptions and
+ judgements about people and situations, which may not be correct?
+    </p>
+   </div>
+   <p class="wpProQuiz_clear" style="clear:both;">
+   </p>
+   <ul class="wpProQuiz_questionList" data-question_id="11260" data-type="single">
+    <li class="wpProQuiz_questionListItem" data-pos="3">
+     <span style="display:none;">
+      1.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11260" type="radio" value="1"/>
+      Your attitudes and beliefs
+     </label>
+    </li>
+    <li class="wpProQuiz_questionListItem" data-pos="1">
+     <span style="display:none;">
+      2.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11260" type="radio" value="0"/>
+      Your attitudes and values
+     </label>
+    </li>
+    <li class="wpProQuiz_questionListItem" data-pos="0">
+     <span style="display:none;">
+      3.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11260" type="radio" value="0"/>
+      Your beliefs and goals
+     </label>
+    </li>
+    <li class="wpProQuiz_questionListItem" data-pos="2">
+     <span style="display:none;">
+      4.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11260" type="radio" value="0"/>
+      Your values and beliefs
+     </label>
+    </li>
+   </ul>
+  </div>
+  <div class="wpProQuiz_response" style="display: none;">
+   <div class="wpProQuiz_correct" style="display: none;">
+    <span>
+     Correct
+    </span>
+    <div class="wpProQuiz_AnswerMessage">
+    </div>
+   </div>
+   <div class="wpProQuiz_incorrect" style="display: none;">
+    <span>
+     Incorrect
+    </span>
+    <div class="wpProQuiz_AnswerMessage">
+    </div>
+   </div>
+  </div>
+  <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="back" style="float: left ; margin-right: 10px ; display: none;" type="button" value="Back"/>
+  <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="check" style="float: right; margin-right: 10px; display: none;" type="button" value="Check"/>
+  <input class="wpProQuiz_button wpProQuiz_QuestionButton" data-question-lock="true" name="next" style="float: right; display: none;" type="button" value="Next"/>
+  <div style="clear: both;">
+  </div>
+ </li>
+ <li class="wpProQuiz_listItem">
+  <div class="wpProQuiz_question_page">
+   Question
+   <span>
+    8
+   </span>
+   of
+   <span>
+    15
+   </span>
+  </div>
+  <div class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;">
+   <div class="wpProQuiz_question_text">
+    <p>
+     A trusted, independent person who provides support such as speaking and acting on behalf of the individual is known as an?
+    </p>
+   </div>
+   <p class="wpProQuiz_clear" style="clear:both;">
+   </p>
+   <ul class="wpProQuiz_questionList" data-question_id="11256" data-type="single">
+    <li class="wpProQuiz_questionListItem" data-pos="1">
+     <span style="display:none;">
+      1.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11256" type="radio" value="0"/>
+      Artist
+     </label>
+    </li>
+    <li class="wpProQuiz_questionListItem" data-pos="0">
+     <span style="display:none;">
+      2.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11256" type="radio" value="0"/>
+      Actuary
+     </label>
+    </li>
+    <li class="wpProQuiz_questionListItem" data-pos="2">
+     <span style="display:none;">
+      3.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11256" type="radio" value="1"/>
+      Advocate
+     </label>
+    </li>
+    <li class="wpProQuiz_questionListItem" data-pos="3">
+     <span style="display:none;">
+      4.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11256" type="radio" value="0"/>
+      Attorney
+     </label>
+    </li>
+   </ul>
+  </div>
+  <div class="wpProQuiz_response" style="display: none;">
+   <div class="wpProQuiz_correct" style="display: none;">
+    <span>
+     Correct
+    </span>
+    <div class="wpProQuiz_AnswerMessage">
+    </div>
+   </div>
+   <div class="wpProQuiz_incorrect" style="display: none;">
+    <span>
+     Incorrect
+    </span>
+    <div class="wpProQuiz_AnswerMessage">
+    </div>
+   </div>
+  </div>
+  <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="back" style="float: left ; margin-right: 10px ; display: none;" type="button" value="Back"/>
+  <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="check" style="float: right; margin-right: 10px; display: none;" type="button" value="Check"/>
+  <input class="wpProQuiz_button wpProQuiz_QuestionButton" data-question-lock="true" name="next" style="float: right; display: none;" type="button" value="Next"/>
+  <div style="clear: both;">
+  </div>
+ </li>
+ <li class="wpProQuiz_listItem">
+  <div class="wpProQuiz_question_page">
+   Question
+   <span>
+    9
+   </span>
+   of
+   <span>
+    15
+   </span>
+  </div>
+  <div class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;">
+   <div class="wpProQuiz_question_text">
+    <p>
+     What should you do if you do not have a copy of your job description?
+    </p>
+   </div>
+   <p class="wpProQuiz_clear" style="clear:both;">
+   </p>
+   <ul class="wpProQuiz_questionList" data-question_id="11261" data-type="single">
+    <li class="wpProQuiz_questionListItem" data-pos="3">
+     <span style="display:none;">
+      1.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11261" type="radio" value="0"/>
+      Use your job description from a previous workplace
+     </label>
+    </li>
+    <li class="wpProQuiz_questionListItem" data-pos="0">
+     <span style="display:none;">
+      2.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11261" type="radio" value="0"/>
+      Nothing, you don't need a copy
+     </label>
+    </li>
+    <li class="wpProQuiz_questionListItem" data-pos="1">
+     <span style="display:none;">
+      3.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11261" type="radio" value="1"/>
+      Ask your employer to provide a copy
+     </label>
+    </li>
+    <li class="wpProQuiz_questionListItem" data-pos="2">
+     <span style="display:none;">
+      4.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11261" type="radio" value="0"/>
+      Ask a colleague for a copy of their job description
+     </label>
+    </li>
+   </ul>
+  </div>
+  <div class="wpProQuiz_response" style="display: none;">
+   <div class="wpProQuiz_correct" style="display: none;">
+    <span>
+     Correct
+    </span>
+    <div class="wpProQuiz_AnswerMessage">
+    </div>
+   </div>
+   <div class="wpProQuiz_incorrect" style="display: none;">
+    <span>
+     Incorrect
+    </span>
+    <div class="wpProQuiz_AnswerMessage">
+    </div>
+   </div>
+  </div>
+  <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="back" style="float: left ; margin-right: 10px ; display: none;" type="button" value="Back"/>
+  <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="check" style="float: right; margin-right: 10px; display: none;" type="button" value="Check"/>
+  <input class="wpProQuiz_button wpProQuiz_QuestionButton" data-question-lock="true" name="next" style="float: right; display: none;" type="button" value="Next"/>
+  <div style="clear: both;">
+  </div>
+ </li>
+ <li class="wpProQuiz_listItem">
+  <div class="wpProQuiz_question_page">
+   Question
+   <span>
+    10
+   </span>
+   of
+   <span>
+    15
+   </span>
+  </div>
+  <div class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;">
+   <div class="wpProQuiz_question_text">
+    <p>
+     Your role will require you to work with many different people who have a variety of roles. What is this known as?
+    </p>
+   </div>
+   <p class="wpProQuiz_clear" style="clear:both;">
+   </p>
+   <ul class="wpProQuiz_questionList" data-question_id="11264" data-type="single">
+    <li class="wpProQuiz_questionListItem" data-pos="0">
+     <span style="display:none;">
+      1.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11264" type="radio" value="0"/>
+      Pretend working
+     </label>
+    </li>
+    <li class="wpProQuiz_questionListItem" data-pos="2">
+     <span style="display:none;">
+      2.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11264" type="radio" value="0"/>
+      People working
+     </label>
+    </li>
+    <li class="wpProQuiz_questionListItem" data-pos="3">
+     <span style="display:none;">
+      3.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11264" type="radio" value="0"/>
+      Peaceful working
+     </label>
+    </li>
+    <li class="wpProQuiz_questionListItem" data-pos="1">
+     <span style="display:none;">
+      4.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11264" type="radio" value="1"/>
+      Partnership working
+     </label>
+    </li>
+   </ul>
+  </div>
+  <div class="wpProQuiz_response" style="display: none;">
+   <div class="wpProQuiz_correct" style="display: none;">
+    <span>
+     Correct
+    </span>
+    <div class="wpProQuiz_AnswerMessage">
+    </div>
+   </div>
+   <div class="wpProQuiz_incorrect" style="display: none;">
+    <span>
+     Incorrect
+    </span>
+    <div class="wpProQuiz_AnswerMessage">
+    </div>
+   </div>
+  </div>
+  <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="back" style="float: left ; margin-right: 10px ; display: none;" type="button" value="Back"/>
+  <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="check" style="float: right; margin-right: 10px; display: none;" type="button" value="Check"/>
+  <input class="wpProQuiz_button wpProQuiz_QuestionButton" data-question-lock="true" name="next" style="float: right; display: none;" type="button" value="Next"/>
+  <div style="clear: both;">
+  </div>
+ </li>
+ <li class="wpProQuiz_listItem">
+  <div class="wpProQuiz_question_page">
+   Question
+   <span>
+    11
+   </span>
+   of
+   <span>
+    15
+   </span>
+  </div>
+  <div class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;">
+   <div class="wpProQuiz_question_text">
+    <p>
+     What should you be mindful of using when communicating with individuals, their family and friends?
+    </p>
+   </div>
+   <p class="wpProQuiz_clear" style="clear:both;">
+   </p>
+   <ul class="wpProQuiz_questionList" data-question_id="11259" data-type="single">
+    <li class="wpProQuiz_questionListItem" data-pos="1">
+     <span style="display:none;">
+      1.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11259" type="radio" value="1"/>
+      Jargon
+     </label>
+    </li>
+    <li class="wpProQuiz_questionListItem" data-pos="0">
+     <span style="display:none;">
+      2.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11259" type="radio" value="0"/>
+      Pictures
+     </label>
+    </li>
+    <li class="wpProQuiz_questionListItem" data-pos="2">
+     <span style="display:none;">
+      3.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11259" type="radio" value="0"/>
+      Talking too much
+     </label>
+    </li>
+    <li class="wpProQuiz_questionListItem" data-pos="3">
+     <span style="display:none;">
+      4.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11259" type="radio" value="0"/>
+      Policies
+     </label>
+    </li>
+   </ul>
+  </div>
+  <div class="wpProQuiz_response" style="display: none;">
+   <div class="wpProQuiz_correct" style="display: none;">
+    <span>
+     Correct
+    </span>
+    <div class="wpProQuiz_AnswerMessage">
+    </div>
+   </div>
+   <div class="wpProQuiz_incorrect" style="display: none;">
+    <span>
+     Incorrect
+    </span>
+    <div class="wpProQuiz_AnswerMessage">
+    </div>
+   </div>
+  </div>
+  <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="back" style="float: left ; margin-right: 10px ; display: none;" type="button" value="Back"/>
+  <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="check" style="float: right; margin-right: 10px; display: none;" type="button" value="Check"/>
+  <input class="wpProQuiz_button wpProQuiz_QuestionButton" data-question-lock="true" name="next" style="float: right; display: none;" type="button" value="Next"/>
+  <div style="clear: both;">
+  </div>
+ </li>
+ <li class="wpProQuiz_listItem">
+  <div class="wpProQuiz_question_page">
+   Question
+   <span>
+    12
+   </span>
+   of
+   <span>
+    15
+   </span>
+  </div>
+  <div class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;">
+   <div class="wpProQuiz_question_text">
+    <p>
+     Your organisation will have aims, which means?
+    </p>
+   </div>
+   <p class="wpProQuiz_clear" style="clear:both;">
+   </p>
+   <ul class="wpProQuiz_questionList" data-question_id="11266" data-type="single">
+    <li class="wpProQuiz_questionListItem" data-pos="1">
+     <span style="display:none;">
+      1.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11266" type="radio" value="0"/>
+      The beliefs or ideals of the organisation, which should be evident in all aspects of care that you provide
+     </label>
+    </li>
+    <li class="wpProQuiz_questionListItem" data-pos="2">
+     <span style="display:none;">
+      2.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11266" type="radio" value="0"/>
+      The specific things that must be in place in order to achieve the aims
+     </label>
+    </li>
+    <li class="wpProQuiz_questionListItem" data-pos="3">
+     <span style="display:none;">
+      3.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11266" type="radio" value="0"/>
+      These are closely connected to your morals and values. They are aspects
+ of your life that you feel strongly about, which provide daily guidance
+     </label>
+    </li>
+    <li class="wpProQuiz_questionListItem" data-pos="0">
+     <span style="display:none;">
+      4.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11266" type="radio" value="1"/>
+      The overall general goals of the organisation
+     </label>
+    </li>
+   </ul>
+  </div>
+  <div class="wpProQuiz_response" style="display: none;">
+   <div class="wpProQuiz_correct" style="display: none;">
+    <span>
+     Correct
+    </span>
+    <div class="wpProQuiz_AnswerMessage">
+    </div>
+   </div>
+   <div class="wpProQuiz_incorrect" style="display: none;">
+    <span>
+     Incorrect
+    </span>
+    <div class="wpProQuiz_AnswerMessage">
+    </div>
+   </div>
+  </div>
+  <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="back" style="float: left ; margin-right: 10px ; display: none;" type="button" value="Back"/>
+  <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="check" style="float: right; margin-right: 10px; display: none;" type="button" value="Check"/>
+  <input class="wpProQuiz_button wpProQuiz_QuestionButton" data-question-lock="true" name="next" style="float: right; display: none;" type="button" value="Next"/>
+  <div style="clear: both;">
+  </div>
+ </li>
+ <li class="wpProQuiz_listItem">
+  <div class="wpProQuiz_question_page">
+   Question
+   <span>
+    13
+   </span>
+   of
+   <span>
+    15
+   </span>
+  </div>
+  <div class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;">
+   <div class="wpProQuiz_question_text">
+    <p>
+     Effective communication should be?
+    </p>
+   </div>
+   <p class="wpProQuiz_clear" style="clear:both;">
+   </p>
+   <ul class="wpProQuiz_questionList" data-question_id="72724" data-type="single">
+    <li class="wpProQuiz_questionListItem" data-pos="0">
+     <span style="display:none;">
+      1.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_72724" type="radio" value="1"/>
+      All of these answers
+     </label>
+    </li>
+    <li class="wpProQuiz_questionListItem" data-pos="1">
+     <span style="display:none;">
+      2.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_72724" type="radio" value="0"/>
+      Two-way
+     </label>
+    </li>
+    <li class="wpProQuiz_questionListItem" data-pos="2">
+     <span style="display:none;">
+      3.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_72724" type="radio" value="0"/>
+      Understandable
+     </label>
+    </li>
+    <li class="wpProQuiz_questionListItem" data-pos="3">
+     <span style="display:none;">
+      4.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_72724" type="radio" value="0"/>
+      Free of jargon
+     </label>
+    </li>
+   </ul>
+  </div>
+  <div class="wpProQuiz_response" style="display: none;">
+   <div class="wpProQuiz_correct" style="display: none;">
+    <span>
+     Correct
+    </span>
+    <div class="wpProQuiz_AnswerMessage">
+    </div>
+   </div>
+   <div class="wpProQuiz_incorrect" style="display: none;">
+    <span>
+     Incorrect
+    </span>
+    <div class="wpProQuiz_AnswerMessage">
+    </div>
+   </div>
+  </div>
+  <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="back" style="float: left ; margin-right: 10px ; display: none;" type="button" value="Back"/>
+  <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="check" style="float: right; margin-right: 10px; display: none;" type="button" value="Check"/>
+  <input class="wpProQuiz_button wpProQuiz_QuestionButton" data-question-lock="true" name="next" style="float: right; display: none;" type="button" value="Next"/>
+  <div style="clear: both;">
+  </div>
+ </li>
+ <li class="wpProQuiz_listItem">
+  <div class="wpProQuiz_question_page">
+   Question
+   <span>
+    14
+   </span>
+   of
+   <span>
+    15
+   </span>
+  </div>
+  <div class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;">
+   <div class="wpProQuiz_question_text">
+    <p>
+     Complex terminology, which is often used by professionals is also known as which of the following?
+    </p>
+   </div>
+   <p class="wpProQuiz_clear" style="clear:both;">
+   </p>
+   <ul class="wpProQuiz_questionList" data-question_id="11265" data-type="single">
+    <li class="wpProQuiz_questionListItem" data-pos="1">
+     <span style="display:none;">
+      1.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11265" type="radio" value="0"/>
+      Communication
+     </label>
+    </li>
+    <li class="wpProQuiz_questionListItem" data-pos="0">
+     <span style="display:none;">
+      2.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11265" type="radio" value="1"/>
+      Jargon
+     </label>
+    </li>
+    <li class="wpProQuiz_questionListItem" data-pos="2">
+     <span style="display:none;">
+      3.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11265" type="radio" value="0"/>
+      Advice
+     </label>
+    </li>
+    <li class="wpProQuiz_questionListItem" data-pos="3">
+     <span style="display:none;">
+      4.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_11265" type="radio" value="0"/>
+      Advocacy
+     </label>
+    </li>
+   </ul>
+  </div>
+  <div class="wpProQuiz_response" style="display: none;">
+   <div class="wpProQuiz_correct" style="display: none;">
+    <span>
+     Correct
+    </span>
+    <div class="wpProQuiz_AnswerMessage">
+    </div>
+   </div>
+   <div class="wpProQuiz_incorrect" style="display: none;">
+    <span>
+     Incorrect
+    </span>
+    <div class="wpProQuiz_AnswerMessage">
+    </div>
+   </div>
+  </div>
+  <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="back" style="float: left ; margin-right: 10px ; display: none;" type="button" value="Back"/>
+  <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="check" style="float: right; margin-right: 10px; display: none;" type="button" value="Check"/>
+  <input class="wpProQuiz_button wpProQuiz_QuestionButton" data-question-lock="true" name="next" style="float: right; display: none;" type="button" value="Next"/>
+  <div style="clear: both;">
+  </div>
+ </li>
+ <li class="wpProQuiz_listItem">
+  <div class="wpProQuiz_question_page">
+   Question
+   <span>
+    15
+   </span>
+   of
+   <span>
+    15
+   </span>
+  </div>
+  <div class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;">
+   <div class="wpProQuiz_question_text">
+    <p>
+     These are closely connected to your morals and values. They are
+ aspects of your life that you feel strongly about, which provide daily 
+guidance. This is the definition of which of the following?
+    </p>
+   </div>
+   <p class="wpProQuiz_clear" style="clear:both;">
+   </p>
+   <ul class="wpProQuiz_questionList" data-question_id="12826" data-type="single">
+    <li class="wpProQuiz_questionListItem" data-pos="2">
+     <span style="display:none;">
+      1.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_12826" type="radio" value="0"/>
+      Attitudes
+     </label>
+    </li>
+    <li class="wpProQuiz_questionListItem" data-pos="0">
+     <span style="display:none;">
+      2.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_12826" type="radio" value="0"/>
+      Background
+     </label>
+    </li>
+    <li class="wpProQuiz_questionListItem" data-pos="1">
+     <span style="display:none;">
+      3.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_12826" type="radio" value="0"/>
+      Experiences
+     </label>
+    </li>
+    <li class="wpProQuiz_questionListItem" data-pos="3">
+     <span style="display:none;">
+      4.
+     </span>
+     <label>
+      <input autocomplete="off" class="wpProQuiz_questionInput" name="question_127_12826" type="radio" value="1"/>
+      Beliefs
+     </label>
+    </li>
+   </ul>
+  </div>
+  <div class="wpProQuiz_response" style="display: none;">
+   <div class="wpProQuiz_correct" style="display: none;">
+    <span>
+     Correct
+    </span>
+    <div class="wpProQuiz_AnswerMessage">
+    </div>
+   </div>
+   <div class="wpProQuiz_incorrect" style="display: none;">
+    <span>
+     Incorrect
+    </span>
+    <div class="wpProQuiz_AnswerMessage">
+    </div>
+   </div>
+  </div>
+  <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="back" style="float: left ; margin-right: 10px ; display: none;" type="button" value="Back"/>
+  <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="check" style="float: right; margin-right: 10px; display: none;" type="button" value="Check"/>
+  <input class="wpProQuiz_button wpProQuiz_QuestionButton" data-question-lock="true" disabled="disabled" name="next" style="float: right; display: none;" type="button" value="Finish Quiz"/>
+  <div style="clear: both;">
+  </div>
+ </li>
+ <li class="wpProQuiz_listItem">
+  <input class="wpProQuiz_button wpProQuiz_QuestionButton" id="btn_check" name="check" style="float: right; margin-right: 10px; " type="button" value="Check"/>
+  <div style="clear: both;">
+  </div>
+ </li>
 </ol>
-{% end block %}
+
+<script src="/static/check_quiz.js"></script>
+{% endblock %}
