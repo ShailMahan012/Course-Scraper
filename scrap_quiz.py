@@ -3,15 +3,7 @@
 
 from bs4 import BeautifulSoup as bs
 import copy
-# import os
-# import requests
-# import pickle
-
-# read session file create by create_session.py script in which login session is stored
-# no need to login to website again and again
-# pickle_in = open("session.pickle","rb")
-# session = pickle.load(pickle_in) # requests session
-# pickle_in.close()
+import shutil
 
 
 def get_soup(content):
@@ -20,8 +12,8 @@ def get_soup(content):
 
 
 def write_HTML(HTML, unit_no):
-    # file = open(f"units/unit_{unit_no}/quiz.html", "w")
-    file = open(f"flask_app/templates/care_certificate/quiz_example.html", "w")
+    file = open(f"units/unit_{unit_no}/quiz.html", "w")
+    # file = open(f"flask_app/templates/care_certificate/quiz_example.html", "w")
     file.write(HTML)
     file.close()
 
@@ -104,6 +96,24 @@ def get_result(soup):
     return result_div.prettify()
 
 
+def get_audio(soup, unit_dir):
+    audio = soup.find("div", {"id": "skin_default"})
+    audio_source = audio.find("source")
+
+    audio_path = f"{unit_dir}/{audio_source['src']}"
+
+    audio_mp4 = (audio_source["src"]).split("/")[1]
+
+    audio_src = f"/static/quiz_audio/{audio_mp4}"
+    audio_source["src"] = audio_src
+
+    audio_source_dest = f"flask_app{audio_src}"
+
+    shutil.copy(audio_path, audio_source_dest)
+
+    return audio
+
+
 layout = """
 <link rel="stylesheet" href="/static/quiz.css">
 {{% extends 'care_certificate/quiz_layout.html' %}}
@@ -122,6 +132,7 @@ layout = """
 
 {{% block quiz %}}
 {}
+<script src="/static/check_quiz.js"></script>
 {{% endblock %}}
 """
 
@@ -133,7 +144,7 @@ for unit_no in range(1, 16):
 
     top_box = soup.find("div", {"class": "wpb_column vc_column_container vc_col-sm-12"}) # this
 
-    audio = soup.find("div", {"id": "skin_default"}) # this
+    audio = get_audio(soup, unit_dir) # this
 
     result_div = get_result(soup)
 
@@ -143,4 +154,4 @@ for unit_no in range(1, 16):
     write_HTML(HTML, unit_no)
 
     print(f"DONE: {unit_no}")
-    break
+    # break

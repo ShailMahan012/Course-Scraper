@@ -21,7 +21,7 @@ can go back to the lessons and reattempt the quiz again as many times as
 <div class="skin_default" id="skin_default">
 <div class="h5ap_quick_player" data-options='{"controls":["play","progress","duration","mute","volume"],"seekTime":0}' style="width:px">
 <audio autoplay="autoplay" class="player642038f54e1f7" controls="controls" muted="muted" playsinline="" preload="auto">
-<source src="solved_files/43-mini-quiz.2_1.mp3" type="audio/mp3"/>
+<source src="/static/quiz_audio/43-mini-quiz.2_1.mp3" type="audio/mp3"/>
             Your browser does not support the audio element.
             </audio>
 </div>
@@ -1282,10 +1282,11 @@ guidance. This is the definition of which of the following?
   </div>
  </li>
  <li class="wpProQuiz_listItem">
-  <input class="wpProQuiz_button wpProQuiz_QuestionButton" name="check" style="float: right; margin-right: 10px; " type="button" value="Check"/>
+  <input class="wpProQuiz_button wpProQuiz_QuestionButton" id="btn_check" name="check" style="float: right; margin-right: 10px; " type="button" value="Check"/>
   <div style="clear: both;">
   </div>
  </li>
 </ol>
 
+<script src="/static/check_quiz.js"></script>
 {% endblock %}
