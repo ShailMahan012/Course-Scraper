@@ -3,15 +3,6 @@
 
 from bs4 import BeautifulSoup as bs
 import copy
-# import os
-# import requests
-# import pickle
-
-# read session file create by create_session.py script in which login session is stored
-# no need to login to website again and again
-# pickle_in = open("session.pickle","rb")
-# session = pickle.load(pickle_in) # requests session
-# pickle_in.close()
 
 
 def get_soup(content):
@@ -122,6 +113,7 @@ layout = """
 
 {{% block quiz %}}
 {}
+<script src="/static/check_quiz.js"></script>
 {{% endblock %}}
 """
 
