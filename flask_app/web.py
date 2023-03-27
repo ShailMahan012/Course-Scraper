@@ -89,9 +89,9 @@ def topic(unit_id, topic_id):
 
 @app.route("/lms/care-certificate/unit/<int:unit_id>/quiz")
 def quiz(unit_id):
-    # unit_dir = f"care_certificate/units/unit_{unit_id}"
-    # return render_template(f"{unit_dir}/quiz.html")
-    return render_template("care_certificate/quiz_example.html")
+    unit_dir = f"care_certificate/units/unit_{unit_id}"
+    return render_template(f"{unit_dir}/quiz.html")
+    # return render_template("care_certificate/quiz_example.html")
 
 
 if __name__ == "__main__":
