@@ -5,7 +5,7 @@ def get_soup(html):
     soup = bs(html, "html.parser")
     return soup
 
-course_layout = "flask_app/templates/care_certificate/course_layout.html"
+course_layout = "flask_app/templates/care_certificate/sidebar.html"
 
 soup = get_soup(open(course_layout).read())
 
@@ -18,7 +18,11 @@ for ic, unit in enumerate(all_units):
     
     for ix, topic_link in enumerate(topics):
         topic_no = ix + 1
-        topic_link["href"] = f"/lms/care-certificate/unit/{unit_no}/topic/{topic_no}"
+        if len(topics) == topic_no:
+            topic_link["href"] = f"/lms/care-certificate/unit/{unit_no}/quiz"
+        else:
+            topic_link["href"] = f"/lms/care-certificate/unit/{unit_no}/topic/{topic_no}"
+    # break
 
 open(course_layout, "w").write(str(soup))
 
