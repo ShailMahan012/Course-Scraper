@@ -1,4 +1,9 @@
 # STATUS: DONE
+
+# Scrap Topic links and titles
+# Srap Quiz links and titles
+# Scrap all unit titles
+
 from bs4 import BeautifulSoup as bs 
 import pickle
 
@@ -18,11 +23,20 @@ URL = "https://cpdonline.co.uk/lms/care-certificate/"
 soup = get_soup(URL)
 
 side_bar = soup.find(class_ = "learndash_navigation_lesson_topics_list")
+all_units_top = side_bar.find_all("div", {"class": "lesson"})
 all_units = side_bar.find_all("ul")
 
+# Write title for every unit
+unit_title_file = open(f"units/unit_titles.txt", "w")
+for i in all_units_top:
+    title = i.text.strip()
+    unit_title_file.write(title)
+    unit_title_file.write("\n")
+unit_title_file.close()
+    
 
+# Write title and link of topic and quiz for every topic in specific unit_no file
 for i, unit in enumerate(all_units):
-    open("test.html", "w").write(str(unit))
     unit_path = f"units/unit_{i+1}/"
     topic_file = open(f"{unit_path}topic_links.txt", "w")
     topic_title_file = open(f"{unit_path}topic_titles.txt", "w")
