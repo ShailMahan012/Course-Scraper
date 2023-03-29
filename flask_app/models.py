@@ -14,8 +14,8 @@ class Users(db.Model):
     email = db.Column(db.Text, unique=True, nullable=False)
     password = db.Column(db.Text, nullable=False)
 
-    firstname = db.Column(db.Text, nullable=False)
-    lastname = db.Column(db.Text, nullable=True)
+    f_name = db.Column(db.Text, nullable=False)
+    l_name = db.Column(db.Text, nullable=True)
 
     country = db.Column(db.Text)
     company = db.Column(db.Text)
