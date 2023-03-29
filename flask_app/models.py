@@ -11,7 +11,6 @@ app.app_context().push()
 class Users(db.Model):
     __tablename__ = 'Users'
     id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.Text, unique=True, nullable=False)
     email = db.Column(db.Text, unique=True, nullable=False)
     password = db.Column(db.Text, nullable=False)
 
@@ -20,9 +19,9 @@ class Users(db.Model):
 
     country = db.Column(db.Text)
     company = db.Column(db.Text)
-    street = db.Column(db.Text)
+    addr1 = db.Column(db.Text)
     addr2 = db.Column(db.Text)
-    town = db.Column(db.Text)
+    city = db.Column(db.Text)
     postcode = db.Column(db.Integer)
 
     phone = db.Column(db.Text)

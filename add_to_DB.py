@@ -3,8 +3,8 @@ sys.path.append("flask_app")
 
 from models import *
 
-# db.drop_all()
-# db.create_all()
+db.drop_all()
+db.create_all()
 # exit()
 
 
