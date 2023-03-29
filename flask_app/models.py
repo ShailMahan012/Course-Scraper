@@ -22,7 +22,7 @@ class Users(db.Model):
     addr1 = db.Column(db.Text)
     addr2 = db.Column(db.Text)
     city = db.Column(db.Text)
-    postcode = db.Column(db.Integer)
+    postcode = db.Column(db.Text)
 
     phone = db.Column(db.Text)
 
